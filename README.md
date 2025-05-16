@@ -46,8 +46,8 @@ The backend API is built with **.NET Web API**, implementing endpoints defined i
 ## Technologies Used
 
 - **Backend:** .NET 7 Web API  
-- **Frontend:** React (or your choice)  
-- **Database:** SQL Server / PostgreSQL   
+- **Frontend:** React + Vite  
+- **Database:** SQL Server / PostgreSQL  
 - **Authentication:** JWT and Email Confirmation  
 - **Email Service:** SMTP or third-party email provider  
 - **Styling:** Tailwind CSS  
@@ -55,17 +55,19 @@ The backend API is built with **.NET Web API**, implementing endpoints defined i
 
 ---
 
-## Getting Started
+## How to Run the Project
 
-### Prerequisites
+### ✅ Prerequisites
 
-- .NET SDK 7 or higher  
-- Node.js and npm (for frontend)  
-- Database server (SQL Server/PostgreSQL) 
+- Download [Node.js (v16+)](https://nodejs.org/)
+- open project on visual studio code
+- open new terminal
+- write this cammand "npm run dev"
 
-### Backend Setup
+---
 
-1. Clone the repository:
+### 📥 Clone the Repository
 
-   ```bash
-   git clone (https://github.com/MahmoudShaaban00/areeb_task.git)
+```bash
+git clone https://github.com/MahmoudShaaban00/areeb_task.git
+cd areeb_task
