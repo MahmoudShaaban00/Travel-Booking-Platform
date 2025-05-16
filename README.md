@@ -8,14 +8,17 @@ Book airplane flights, hotel stays, airport taxis, and cars for travel anywhere 
 
 ## Overview
 
-This project is a full-stack web application designed to make booking travel services simple and secure. Users can register, confirm their email, and login to access a range of travel booking options, including:
+This is a full-stack web application designed to provide secure and convenient booking for travel services:
 
 - Airplane tickets  
 - Hotel reservations  
 - Airport taxi rides  
 - Cars for travel within the country  
 
-Once users select a booking type, they can view related events and book them easily. Admin users can manage event categories and events through a powerful dashboard with create, update, and delete functionalities.
+Users can register, confirm their email, and log in to book events and travel services. An admin dashboard allows managing categories and events with full CRUD (Create, Read, Update, Delete) functionality.
+
+The backend API is built with **.NET Web API**, implementing endpoints defined in the Postman collection:  
+[Postman API Collection](https://api.postman.com/collections/29523133-669c4eb4-3da6-4d52-a245-c7ad10124b04?access_key=PMAT-01JTP9BDJFJ7X6Y1Z8HVA8Y5VG)
 
 ---
 
@@ -23,38 +26,47 @@ Once users select a booking type, they can view related events and book them eas
 
 ### User Authentication & Security
 - User registration with email confirmation  
-- Secure login with encrypted passwords  
-- Email verification to confirm user accounts  
+- Secure login using JWT tokens  
+- Password hashing and validation  
 
 ### Booking Services
 - Book airplane trips  
 - Book hotels  
 - Book airport taxi rides  
 - Book cars for travel within the country  
-- Each service option has a dedicated button that shows related events for users to book  
+- Events linked to each service with detailed booking options  
 
-### Events & Categories Management (Admin Dashboard)
-- Create, update, and delete event categories  
-- Create, update, and delete events  
-- Manage all booking events and categories efficiently  
+### Admin Dashboard
+- Manage event categories (create, update, delete)  
+- Manage events (create, update, delete)  
+- View all bookings and user activity  
 
 ---
 
 ## Technologies Used
 
-- Frontend: React  
-- Backend: Node.js with Express  
-- Database: MongoDB (or your database choice)  
-- Authentication: JWT tokens and email confirmation  
-- Email Service: Nodemailer (or your choice)  
-- Styling: Tailwind CSS (or your preferred CSS framework)  
+- **Backend:** .NET 7 Web API  
+- **Frontend:** React (or your choice)  
+- **Database:** SQL Server / PostgreSQL   
+- **Authentication:** JWT and Email Confirmation  
+- **Email Service:** SMTP or third-party email provider  
+- **Styling:** Tailwind CSS  
+- **API Documentation:** Postman  
 
 ---
 
-## Installation & Setup
+## Getting Started
 
-1. Clone this repository:
+### Prerequisites
+
+- .NET SDK 7 or higher  
+- Node.js and npm (for frontend)  
+- Database server (SQL Server/PostgreSQL) 
+
+### Backend Setup
+
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/yourusername/events-booking.git
-   cd events-booking
+   cd events-booking/backend
