@@ -68,5 +68,4 @@ The backend API is built with **.NET Web API**, implementing endpoints defined i
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/events-booking.git
-   cd events-booking/backend
+   git clone (https://github.com/MahmoudShaaban00/areeb_task.git)
