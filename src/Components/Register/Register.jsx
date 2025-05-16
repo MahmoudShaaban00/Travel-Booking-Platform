@@ -55,25 +55,25 @@ export default function Register() {
           <Form className="space-y-4">
             <div>
               <label className="block mb-1 text-blue-600 font-semibold">fullName</label>
-              <Field type="text" name="fullName" className="w-full border-1 border-amber-200 px-3 py-2 rounded"/>
+              <Field type="text" name="fullName" className="w-full border-1 border-gray-400 px-3 py-2 rounded"/>
               <ErrorMessage name="fullName" component="div" className="text-red-500 text-sm" />
             </div>
 
             <div>
               <label className="block mb-1 text-blue-600 font-semibold">Email</label>
-              <Field type="email" name="email" className="w-full border-1 border-amber-200 px-3 py-2 rounded"/>
+              <Field type="email" name="email" className="w-full border-1 border-gray-400 px-3 py-2 rounded"/>
               <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
             </div>
 
             <div>
               <label className="block mb-1 text-blue-600 font-semibold">Phone</label>
-              <Field type="tel" name="phoneNumber" className="w-full border-1 border-amber-200 px-3 py-2 rounded"/>
+              <Field type="tel" name="phoneNumber" className="w-full border-1 border-gray-400 px-3 py-2 rounded"/>
               <ErrorMessage name="phoneNumber" component="div" className="text-red-500 text-sm" />
             </div>
 
             <div>
               <label className="block mb-1 text-blue-600 font-semibold">Password</label>
-              <Field type="password" name="password" className="w-full border-1 border-amber-200 px-3 py-2 rounded"/>
+              <Field type="password" name="password" className="w-full border-1 border-gray-400 px-3 py-2 rounded"/>
               <ErrorMessage name="password" component="div" className="text-red-500 text-sm" />
             </div>
 
