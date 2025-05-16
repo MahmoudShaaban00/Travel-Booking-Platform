@@ -1,12 +1,60 @@
-# React + Vite
+# Events Booking
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Your all-in-one platform to book tickets and travel services!**
 
-Currently, two official plugins are available:
+Book airplane flights, hotel stays, airport taxis, and cars for travel anywhere in the country — all from one easy-to-use website. Whether you’re planning a business trip, vacation, or airport transfer, we’ve got you covered.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project is a full-stack web application designed to make booking travel services simple and secure. Users can register, confirm their email, and login to access a range of travel booking options, including:
+
+- Airplane tickets  
+- Hotel reservations  
+- Airport taxi rides  
+- Cars for travel within the country  
+
+Once users select a booking type, they can view related events and book them easily. Admin users can manage event categories and events through a powerful dashboard with create, update, and delete functionalities.
+
+---
+
+## Features
+
+### User Authentication & Security
+- User registration with email confirmation  
+- Secure login with encrypted passwords  
+- Email verification to confirm user accounts  
+
+### Booking Services
+- Book airplane trips  
+- Book hotels  
+- Book airport taxi rides  
+- Book cars for travel within the country  
+- Each service option has a dedicated button that shows related events for users to book  
+
+### Events & Categories Management (Admin Dashboard)
+- Create, update, and delete event categories  
+- Create, update, and delete events  
+- Manage all booking events and categories efficiently  
+
+---
+
+## Technologies Used
+
+- Frontend: React  
+- Backend: Node.js with Express  
+- Database: MongoDB (or your database choice)  
+- Authentication: JWT tokens and email confirmation  
+- Email Service: Nodemailer (or your choice)  
+- Styling: Tailwind CSS (or your preferred CSS framework)  
+
+---
+
+## Installation & Setup
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/yourusername/events-booking.git
+   cd events-booking
