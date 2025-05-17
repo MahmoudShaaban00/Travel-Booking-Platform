@@ -38,7 +38,7 @@ export default function Profile() {
       const token = localStorage.getItem("UserToken");
       if (!token) return;
 
-      const { data } = await axios.get("http://bookevent.runasp.net/api/Auth/GetCurrentUser",
+      const { data } = await axios.get("https://bookevent.runasp.net/api/Auth/GetCurrentUser",
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -70,7 +70,7 @@ export default function Profile() {
 
       const updatedData = { fullName: formData.fullName, email: formData.email, phoneNumber: formData.phoneNumber };
 
-      await axios.put("http://bookevent.runasp.net/api/Auth/Update-User-By-Self", updatedData,
+      await axios.put("https://bookevent.runasp.net/api/Auth/Update-User-By-Self", updatedData,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -89,57 +89,7 @@ export default function Profile() {
     }
   };
 
-  //create feed back
-  const createFeedBack = async () => {
-    try {
-      const token = localStorage.getItem('UserToken');
-      console.log('Token:', token);
-      if (!token) {
-        console.error('Token not found');
-        return;
-      }
-
-      if (comment.trim() === "") {
-        console.error('Comment cannot be empty');
-        return;
-      }
-
-      const feedbackData = {
-        comment: comment,
-        rating: rating
-      };
-
-      console.log('Feedback Data:', feedbackData);
-
-      const response = await axios.post('https://carcareapp.runasp.net/api/FeedBack/CreateFeedBack', feedbackData, {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        }
-      });
-
-      alert("Feedback submitted successfully!");
-      console.log('Feedback submitted successfully:', response.data);
-
-      if (response.data && response.data.id) {
-        localStorage.setItem('FeedBackId', response.data.id)
-        console.log('Feedback ID:', response.data.id);
-      }
-
-      setIsFeedbackOpen(false);
-    } catch (error) {
-      const errorMessage = error.response?.data?.message;
-    
-      if (errorMessage === "You Already Add FeedBack Please Update Your FeedBack or Enter a Comment") {
-        console.error('Feedback already submitted. Please update your feedback.');
-        alert('Feedback already submitted. Please update your feedback.');
-      } else {
-        console.error('Error submitting feedback:', error.response?.data || error.message);
-        alert(`Error submitting feedback: ${errorMessage || error.message}`);
-      }
-    }
-    
-  };
+ 
 
   useEffect(() => {
     getCurrentUser();

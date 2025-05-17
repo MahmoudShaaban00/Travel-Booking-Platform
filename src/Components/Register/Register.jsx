@@ -35,7 +35,7 @@ export default function Register() {
   const handleSubmit = async (values, { resetForm }) => {
     console.log('Form values:', values);
     try {
-      const response = await axios.post('http://bookevent.runasp.net/api/Auth/Register', values);
+      const response = await axios.post('https://bookevent.runasp.net/api/Auth/Register', values);
       alert('User registered successfully!');
       console.log('User registered:', response.data);
       resetForm(); // Clear the form after submission

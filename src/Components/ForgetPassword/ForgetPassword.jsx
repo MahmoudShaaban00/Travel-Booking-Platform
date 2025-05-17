@@ -12,7 +12,7 @@ export default function ForgetPassword() {
   // Function to handle form submission
   async function handleSubmit(formValues) {
     try {
-      const response = await axios.post('http://bookevent.runasp.net/api/auth/Confirm-Email', {
+      const response = await axios.post('https://bookevent.runasp.net/api/auth/Confirm-Email', {
         email: formValues.email
       });
       console.log('Response:', response.data);

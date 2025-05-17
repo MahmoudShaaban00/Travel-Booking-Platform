@@ -13,7 +13,7 @@ export default function VerifyAccount() {
             console.log("Sending data:", formValues);
 
             const { data } = await axios.post(
-                'http://bookevent.runasp.net/api/auth/Confirm-Email',
+                'https://bookevent.runasp.net/api/auth/Confirm-Email',
                 formValues,
                 {
                     headers: { 'Content-Type': 'application/json' },

@@ -16,6 +16,7 @@ export default function CreateCategoryPage() {
   const [editName, setEditName] = useState('');
   const [editDescription, setEditDescription] = useState('');
 
+  // Create category
   const handleCreateCategory = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -47,6 +48,7 @@ export default function CreateCategoryPage() {
     }
   };
 
+  // Fetch all categories
   const getAllCategories = async (pageIndex, pageSize) => {
     const token = localStorage.getItem('AdminToken');
     if (!token) {
@@ -56,7 +58,7 @@ export default function CreateCategoryPage() {
 
     try {
       const { data } = await axios.get(
-        'http://bookevent.runasp.net/api/Category/GetAllCategories',
+        'https://bookevent.runasp.net/api/Category/GetAllCategories',
         {
           params: {
             pageIndex,
@@ -75,13 +77,14 @@ export default function CreateCategoryPage() {
     }
   };
 
+  // Delete category
   const handleDeleteCategory = async (categoryId) => {
     const token = localStorage.getItem('AdminToken');
     if (!token || !categoryId) return;
 
     try {
       const { data } = await axios.delete(
-        `http://bookevent.runasp.net/api/Category/DeleteCategory/${categoryId}`,
+        `https://bookevent.runasp.net/api/Category/DeleteCategory/${categoryId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -98,25 +101,28 @@ export default function CreateCategoryPage() {
     }
   };
 
+  // Start editing category
   const startEditingCategory = (category) => {
     setEditingCategoryId(category.id);
     setEditName(category.name);
     setEditDescription(category.description);
   };
 
+  // Cancel editing
   const cancelEditing = () => {
     setEditingCategoryId(null);
     setEditName('');
     setEditDescription('');
   };
 
+  // Update category
   const handleUpdateCategory = async () => {
     const token = localStorage.getItem('AdminToken');
     if (!token) return;
 
     try {
       const { data } = await axios.put(
-        `http://bookevent.runasp.net/api/Category/UpdateCategory/${editingCategoryId}`,
+        `https://bookevent.runasp.net/api/Category/UpdateCategory/${editingCategoryId}`,
         {
           name: editName,
           description: editDescription,

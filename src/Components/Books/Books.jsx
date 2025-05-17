@@ -11,7 +11,7 @@ export default function Books() {
     const token = localStorage.getItem('UserToken');
     try {
       const { data: responseData } = await axios.get(
-        'http://bookevent.runasp.net/api/Book/GetAllBooksForUser',
+        'https://bookevent.runasp.net/api/Book/GetAllBooksForUser',
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -52,7 +52,7 @@ export default function Books() {
 
     try {
       setDeletingId(id);
-      await axios.delete(`http://bookevent.runasp.net/api/Book/CancelBook/${id}`, {
+      await axios.delete(`https://bookevent.runasp.net/api/Book/CancelBook/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       // After delete, refresh bookings

@@ -19,7 +19,7 @@ export default function Hotels({ selectedCategoryId }) {
 
     setLoadingEvents(true);
     try {
-      const { data } = await axios.get('http://bookevent.runasp.net/api/Event/GetAllEvents', {
+      const { data } = await axios.get('https://bookevent.runasp.net/api/Event/GetAllEvents', {
         params: {
           categoryId,
           pageIndex: page,

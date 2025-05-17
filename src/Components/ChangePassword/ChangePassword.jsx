@@ -8,6 +8,7 @@ import { AiOutlineLock } from 'react-icons/ai';
 export default function ChangePassword() {
   let navigate = useNavigate();
 
+  // Function to handle form submission
   const handleChangePassword = async (formValues) => {
     try {
       const token = localStorage.getItem("UserToken");
@@ -17,7 +18,7 @@ export default function ChangePassword() {
       }
 
       const { data } = await axios.post(
-        "http://bookevent.runasp.net/api/Auth/Change-Password",
+        "https://bookevent.runasp.net/api/Auth/Change-Password",
         formValues,
         {
           headers: {
@@ -36,11 +37,13 @@ export default function ChangePassword() {
     }
   };
 
+  // Validation schema using Yup
   const validationSchema = Yup.object().shape({
     currentPassword: Yup.string().required('Old password is required'),
     newPassword: Yup.string().required('New password is required'),
   });
 
+  // Formik setup
   const formik = useFormik({
     initialValues: {
       currentPassword: '',

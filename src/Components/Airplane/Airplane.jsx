@@ -14,12 +14,13 @@ export default function Airplane({ selectedCategoryId }) {
 
   const { createBook } = useBook();
 
+  // Fetch events based on category and page index
   const fetchEvents = async (categoryId = 1, page = 1) => {
     if (!categoryId) return;
 
     setLoadingEvents(true);
     try {
-      const { data } = await axios.get('http://bookevent.runasp.net/api/Event/GetAllEvents', {
+      const { data } = await axios.get('https://bookevent.runasp.net/api/Event/GetAllEvents', {
         params: {
           categoryId,
           pageIndex: page,
@@ -46,6 +47,7 @@ export default function Airplane({ selectedCategoryId }) {
     fetchEvents(selectedCategoryId || 1, pageIndex);
   }, [selectedCategoryId, pageIndex]);
 
+  // Handle booking an event
   const handleBook = async (event) => {
     if (!token) {
       alert('User not logged in.');

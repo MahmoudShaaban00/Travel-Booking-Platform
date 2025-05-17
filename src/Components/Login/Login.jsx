@@ -33,7 +33,7 @@ const Login = () => {
 const handleSubmit = async (values) => {
   const { email, password } = values;
   try {
-    const { data } = await axios.post('http://bookevent.runasp.net/api/Auth/login', {
+    const { data } = await axios.post('https://bookevent.runasp.net/api/Auth/login', {
       email,
       password,
     }, {

@@ -14,12 +14,13 @@ export default function CategoriesList({ selectedCategoryId }) {
   const token = localStorage.getItem('UserToken');
   const { createBook } = useBook();
 
+  // Fetch events based on category and page index
   const fetchEvents = async (categoryId = 8, page = 1) => {
     if (!categoryId) return;
 
     setLoadingEvents(true);
     try {
-      const { data } = await axios.get('http://bookevent.runasp.net/api/Event/GetAllEvents', {
+      const { data } = await axios.get('https://bookevent.runasp.net/api/Event/GetAllEvents', {
         params: {
           categoryId,
           pageIndex: page,

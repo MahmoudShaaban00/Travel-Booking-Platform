@@ -17,6 +17,7 @@ export default function Events() {
   const [editId, setEditId] = useState(null);
   const pageSize = 3;
 
+  // Handle image change
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -24,6 +25,7 @@ export default function Events() {
     }
   };
 
+  // Reset form function
   const resetForm = () => {
     setName('');
     setDescription('');
@@ -35,6 +37,7 @@ export default function Events() {
     setEditId(null);
   };
 
+  // Create or update event function
   const handleCreateEvent = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -59,7 +62,7 @@ export default function Events() {
 
     try {
       if (editId) {
-        await axios.put(`http://bookevent.runasp.net/api/Event/UpdateEvent/${editId}`, formData, {
+        await axios.put(`https://bookevent.runasp.net/api/Event/UpdateEvent/${editId}`, formData, {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'multipart/form-data',
@@ -67,7 +70,7 @@ export default function Events() {
         });
         setMessage('✅ Event updated successfully!');
       } else {
-        await axios.post('http://bookevent.runasp.net/api/Event/CreateEvent', formData, {
+        await axios.post('https://bookevent.runasp.net/api/Event/CreateEvent', formData, {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'multipart/form-data',
@@ -86,6 +89,7 @@ export default function Events() {
     }
   };
 
+  //
   const getAllEvents = async (categoryIdParam = categoryId, page = pageIndex) => {
     setEventsLoading(true);
 
@@ -97,7 +101,7 @@ export default function Events() {
     }
 
     try {
-      const { data } = await axios.get('http://bookevent.runasp.net/api/Event/GetAllEvents', {
+      const { data } = await axios.get('https://bookevent.runasp.net/api/Event/GetAllEvents', {
         params: {
           categoryId: categoryIdParam || undefined,
           pageIndex: page,
@@ -117,6 +121,7 @@ export default function Events() {
     }
   };
 
+  // Delete event function
   const handleDeleteEvent = async (id) => {
     const token = localStorage.getItem('AdminToken');
 
@@ -129,7 +134,7 @@ export default function Events() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://bookevent.runasp.net/api/Event/DeleteEvent/${id}`, {
+      await axios.delete(`https://bookevent.runasp.net/api/Event/DeleteEvent/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -143,6 +148,7 @@ export default function Events() {
     }
   };
 
+  // Edit event function
   const handleEditEvent = (event) => {
     setEditId(event.id);
     setName(event.name);
@@ -159,6 +165,7 @@ export default function Events() {
     getAllEvents(categoryId, pageIndex);
   }, [categoryId, pageIndex]);
 
+  // Initial fetch for events
   const handleFilterChange = (category) => {
     setCategoryId(category);
     setPageIndex(1);
