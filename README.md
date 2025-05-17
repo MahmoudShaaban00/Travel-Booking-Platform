@@ -57,6 +57,13 @@ The backend API is built with **.NET Web API**, implementing endpoints defined i
 
 ## How to Run the Project
 
+### Live Domain
+
+You can access the deployed project on the following Vercel domains:
+- https://areeb-task.vercel.app
+- https://areeb-task-git-main-mahmoudshaaban00s-projects.vercel.app
+- https://areeb-task-6ebevxd82-mahmoudshaaban00s-projects.vercel.app
+
 ### ✅ Prerequisites
 
 - Download [Node.js (v16+)](https://nodejs.org/)
