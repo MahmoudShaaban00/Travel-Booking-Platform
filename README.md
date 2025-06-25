@@ -76,5 +76,5 @@ You can access the deployed project on the following Vercel domains:
 ### 📥 Clone the Repository
 
 ```bash
-git clone https://github.com/MahmoudShaaban00/areeb_task.git
+git clone https://github.com/MahmoudShaaban00/Travel-Booking-Platform.git
 cd areeb_task
