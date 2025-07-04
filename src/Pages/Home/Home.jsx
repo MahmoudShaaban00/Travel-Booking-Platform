@@ -6,7 +6,7 @@ import { GiTimeBomb } from 'react-icons/gi';
 import { MdOutlinePayment } from 'react-icons/md';
 import { FaPlane, FaCar, FaHotel, FaTaxi } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../../Components/Navbar/Navbar';
 
 export default function Home() {
   const navigate = useNavigate();
