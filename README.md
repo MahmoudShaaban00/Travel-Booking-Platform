@@ -6,6 +6,15 @@ Book airplane flights, hotel stays, airport taxis, and cars for travel anywhere 
 
 ---
 
+## Test User Account
+
+You can use the following test user credentials to log in and explore the app:
+
+- **Email:** mahmoudshabankk011@gmail.com  
+- **Password:** 01027938060
+
+---
+
 ## Overview
 
 This is a full-stack web application designed to provide secure and convenient booking for travel services:
@@ -57,7 +66,7 @@ The backend API is built with **.NET Web API**, implementing endpoints defined i
 
 ## How to Run the Project
 
-### Live Domain
+### Live Domains
 
 You can access the deployed project on the following Vercel domains:
 - https://areeb-task.vercel.app
@@ -67,14 +76,9 @@ You can access the deployed project on the following Vercel domains:
 ### ✅ Prerequisites
 
 - Download [Node.js (v16+)](https://nodejs.org/)
-- open project on visual studio code
-- open new terminal
-- write this cammand "npm run dev"
+- Open project in Visual Studio Code
+- Open a new terminal
+- Run the command:
 
----
-
-### 📥 Clone the Repository
-
-```bash
-git clone https://github.com/MahmoudShaaban00/Travel-Booking-Platform.git
-cd areeb_task
+  ```bash
+  npm run dev
